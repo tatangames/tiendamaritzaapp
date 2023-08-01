@@ -23,7 +23,9 @@
         }
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url({{ asset('images/fondo3.jpg') }});
+            background-image: url({{ asset('images/tiendabac.jpg') }});
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .demo-container {
@@ -71,11 +73,11 @@
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
                         <div class="text-center image-size-small position-relative">
-                            <img src="{{ asset('images/logo.png') }}" class="rounded-circle p-2 bg-white">
+                            <img src="{{ asset('images/logonaranja.png') }}" height="80px" width="80px" class="rounded-circle p-2 bg-white">
                         </div>
                         <div class="p-5 bg-white rounded shadow-lg">
-                            <h3 class="mb-2 text-center pt-5"><strong>Alcaldía Municipal de Metapán</strong></h3>
-                            <p class="text-center lead">Repuestos de Bodega Eléctrica</p>
+                            <h3 class="mb-2 text-center pt-5"><strong>Tienda Maritza</strong></h3>
+                            <p class="text-center lead">Control de Productos</p>
                             <form>
                                 <label style="margin-top: 10px" class="font-500">Usuario</label>
                                 <input class="form-control form-control-lg mb-3" id="usuario" autocomplete="off" type="text">

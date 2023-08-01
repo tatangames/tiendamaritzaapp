@@ -17,6 +17,7 @@ class CreateHistorialPreciosTable extends Migration
             $table->id();
             $table->bigInteger('id_productos')->unsigned();
             $table->decimal('precio', 10, 2);
+            $table->date('fecha');
 
 
             $table->foreign('id_productos')->references('id')->on('productos');
