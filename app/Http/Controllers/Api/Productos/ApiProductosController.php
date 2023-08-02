@@ -8,6 +8,7 @@ use App\Models\Productos;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use function PHPUnit\Framework\isEmpty;
 
 class ApiProductosController extends Controller{
 
@@ -24,7 +25,12 @@ class ApiProductosController extends Controller{
 
         foreach ($data as $dd){
 
-            $dd->nombreunido = $dd->nombre . " - " . $dd->codigo;
+            if(isEmpty($dd->codigo)){
+                $dd->nombreunido = $dd->nombre;
+            }else{
+                $dd->nombreunido = $dd->nombre . " - " . $dd->codigo;
+            }
+
             $dd->precio = '$ ' . number_format((float)$dd->precio, 2, '.', ',');
         }
 
